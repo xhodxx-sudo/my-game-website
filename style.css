@@ -1,0 +1,743 @@
+:root{
+    --primary:#c198f5;
+    --secondary:#9a60eb;
+    --white:#ffffff;
+    --black:#000000;
+    --shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Press Start 2P',cursive;
+    background:var(--primary);
+    color:var(--black);
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+section{
+    padding:80px 40px;
+}
+
+h1,h2,h3{
+    line-height:1.6;
+}
+
+p{
+    line-height:1.8;
+    font-size:12px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg,#7b5cff,#a98dff);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+.schedule-top{
+    margin-left: auto;
+}
+
+.logo{
+    margin-left: 15px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+.burger{
+    border:none;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.schedule-top{
+    background:white;
+    color:var(--secondary);
+    border:none;
+    padding:12px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-family:'Press Start 2P',cursive;
+    font-size:10px;
+}
+
+.schedule-top:hover{
+    transform:scale(1.05);
+}
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:300px;
+    height:100vh;
+    background:white;
+    z-index:1000;
+    transition:.4s;
+    box-shadow:var(--shadow);
+}
+
+.mobile-menu.active{
+    left:0;
+}
+
+.mobile-menu ul{
+    list-style:none;
+    margin-top:120px;
+}
+
+.mobile-menu li{
+    margin:30px;
+}
+
+.mobile-menu a{
+    text-decoration:none;
+    color:var(--secondary);
+    font-size:12px;
+}
+
+.close-menu{
+    position:absolute;
+    top:20px;
+    right:20px;
+    border:none;
+    background:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.hero{
+    padding-top:100px;
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero h1{
+    color:white;
+    margin-bottom:30px;
+    font-size:28px;
+    line-height:1.5;
+}
+
+.hero-image{
+    width:850px;
+    max-width:90%;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.hero-image img{
+    width:100%;
+}
+
+.bottom-bar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.admin{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.phone{
+    display:block;
+    margin-bottom:10px;
+}
+
+.name{
+    color:var(--secondary);
+}
+
+.main-btn{
+    border:none;
+    background:var(--secondary);
+    color:white;
+    padding:18px 24px;
+    border-radius:15px;
+    cursor:pointer;
+    font-family:'Press Start 2P',cursive;
+}
+
+.main-btn:hover{
+    transform:translateY(-5px);
+}
+
+.directions{
+    background:white;
+}
+
+.directions h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:var(--secondary);
+}
+
+.direction-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.direction-card{
+    background:#f5ecff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.direction-card:hover{
+    transform:translateY(-10px);
+}
+
+.direction-card h3{
+    margin-bottom:20px;
+    color:var(--secondary);
+}
+
+.card-btn{
+    margin-top:25px;
+    border:none;
+    background:var(--secondary);
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    width:100%;
+    cursor:pointer;
+    font-family:'Press Start 2P',cursive;
+}
+.trainer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.trainer-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    text-align:center;
+	padding:15px;
+}
+
+.trainer-card img{
+    width:180px;
+    height:220px;
+    object-fit:cover;
+    margin:0 auto 15px;
+	border-radius:15px;
+}
+
+.trainer-card h3{
+    margin:15px 0 5px;
+    color:#9a60eb;
+}
+
+.trainer-card p{
+    margin-bottom:20px;
+}
+
+.trainer-card:hover{
+    transform:scale(1.03);
+}
+.subscription-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
+
+.subscription-card{
+    background:#f5ecff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.4s;
+    text-align:center;
+}
+
+.subscription-card:hover{
+    transform:translateY(-10px);
+}
+
+.subscription-card h3{
+    color:#9a60eb;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.subscription-card p{
+    margin:20px 0;
+    font-size:16px;
+}
+
+.subscription-card button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#9a60eb;
+    color:white;
+    cursor:pointer;
+    font-family:'Press Start 2P', cursive;
+}
+.schedule-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:40px;
+    margin-top:50px;
+    max-width:1400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.schedule-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+    min-height:320px;
+}
+
+.schedule-card:hover{
+    transform:translateY(-8px);
+}
+
+.schedule-card:hover{
+    transform:translateY(-10px);
+}
+.schedule-card h3{
+    color:#9a60eb;
+    font-size:24px;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.schedule-card p{
+    font-size:14px;
+    line-height:2;
+}
+.schedule h2{
+    text-align:center;
+    color:#9a60eb;
+    margin-top:50px;
+    margin-bottom:60px;
+    font-size:42px;
+}
+.map{
+    width:100%;
+}
+.footer{
+    margin-top:80px;
+    background:#9a60eb;
+    color:white;
+    padding:30px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1400px;
+    margin:auto;
+    gap:30px;
+}
+
+.footer p{
+    font-size:10px;
+    line-height:1.8;
+}
+.map iframe{
+    width:100%;
+    height:300px;
+    border:none;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.contacts{
+    background:white;
+}
+
+.contacts h2{
+    text-align:center;
+    color:#9a60eb;
+    margin-bottom:40px;
+}
+
+.contacts-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.contacts-info{
+    background:#f5ecff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.contacts-info p{
+    margin-bottom:20px;
+}
+
+.contacts h2{
+    text-align:center;
+    color:#9a60eb;
+    margin-bottom:40px;
+}
+
+.contacts-info{
+    background:#f5ecff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.contacts-info p{
+    margin-bottom:20px;
+}
+.schedule{
+    background:white;
+}
+
+.schedule h2{
+    text-align:center;
+    color:#9a60eb;
+    margin-bottom:40px;
+}
+.subscriptions{
+    background:white;
+}
+
+.subscriptions h2{
+    text-align:center;
+    color:#9a60eb;
+    margin-bottom:40px;
+}
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:.8s;
+}
+
+.visible{
+opacity:1;
+transform:translateY(0);
+}
+.application{
+    max-width:900px;
+    margin:80px auto;
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.application h2{
+    text-align:center;
+    color:#9a60eb;
+    margin-bottom:40px;
+    font-size:24px;
+}
+
+.application-form{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.application-form input,
+.application-form select{
+
+    width:100%;
+    padding:20px;
+
+    border:2px solid #9a60eb;
+
+    border-radius:15px;
+
+    font-size:14px;
+}
+
+.application-form button{
+
+    background:#9a60eb;
+    color:white;
+
+    border:none;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+.footer{
+    width:100%;
+    background:#9a60eb;
+    color:white;
+    padding:30px 50px;
+    margin-top:80px;
+}
+
+.footer-content{
+    max-width:1400px;
+    margin:0 auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-content p{
+    font-size:10px;
+    line-height:1.8;
+}
+
+.footer-block{
+    text-align:center;
+}
+
+.footer-block p{
+    font-size:10px;
+    line-height:1.8;
+}
+.schedule{
+    background:#efe2ff;
+}
+.application-form button:hover{
+
+    transform:translateY(-3px);
+
+}
+.active-link{
+color:#ffffff !important;
+background:#9a60eb;
+padding:10px;
+border-radius:10px;
+}
+/* ========================= */
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+/* ========================= */
+
+@media (max-width:768px){
+
+section{
+    padding:60px 15px;
+}
+
+/* Шапка */
+
+.header{
+	height:80px;
+    padding:0 15px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+.schedule-top{
+    font-size:8px;
+    padding:10px;
+}
+
+/* Главный экран */
+
+.hero h1{
+    font-size:18px;
+}
+
+.hero-image{
+    max-width:100%;
+}
+
+.bottom-bar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.admin{
+    width:95%;
+}
+
+.main-btn{
+    width:95%;
+}
+
+/* Направления */
+
+.direction-grid{
+    grid-template-columns:1fr;
+}
+
+.direction-card{
+    width:100%;
+}
+
+/* Тренеры */
+
+.trainer-grid{
+    grid-template-columns:1fr;
+}
+
+.trainer-card{
+    width:100%;
+    max-width:350px;
+    margin:0 auto;
+}
+
+.trainer-card img{
+    width:160px;
+    height:200px;
+}
+
+/* Абонементы */
+
+.subscription-grid{
+    grid-template-columns:1fr;
+}
+
+.subscription-card{
+    width:100%;
+}
+
+/* Контакты */
+
+.contacts-content{
+    grid-template-columns:1fr;
+}
+
+/* Расписание */
+
+.schedule-grid{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+.schedule-card{
+    width:90%;
+    max-width:500px;
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.schedule-card h3{
+    font-size:22px;
+    margin-bottom:15px;
+    text-align:center;
+}
+.schedule-card p{
+    text-align:center;
+    font-size:14px;
+    line-height:1.8;
+    margin:10px 0;
+}
+
+/* Форма */
+
+.application{
+    width:95%;
+    padding:25px;
+}
+
+.application h2{
+    font-size:18px;
+}
+
+.application-form input,
+.application-form select,
+.application-form button{
+    padding:15px;
+}
+
+/* Футер */
+
+.footer-content{
+	margin-top:40px;
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+html,
+body{
+    overflow-x:hidden;
+}
+
+.schedule{
+    width:100%;
+    overflow:hidden;
+}
+
+.schedule-grid{
+    width:100%;
+    padding:0 10px;
+}
+
+.schedule-card{
+    width:100%;
+    max-width:100%;
+    margin:0 auto;
+}
+
+.application{
+    width:100%;
+    max-width:100%;
+    margin:40px auto;
+}
+.schedule h2{
+    font-size:28px;
+    line-height:1.3;
+    word-break:break-word;
+}
+}
